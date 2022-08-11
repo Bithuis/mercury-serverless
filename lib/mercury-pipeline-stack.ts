@@ -27,7 +27,7 @@ export class MercuryPipelineStack extends cdk.Stack {
         testStage.addPost(new ManualApprovalStep('Manual Approval before production'));
 
         const prodStage = pipeline.addStage(new MercuryPipelineStage(this, 'prod', {
-            env: { account: '905812565527', region: 'us-east-1' },
+            env: { account: '905812565527', region: 'us-east-2' },
         }));
     }
 }
