@@ -9,7 +9,7 @@ export class MercuryPipelineStack extends cdk.Stack {
         new CodePipeline(this, 'MercuryServerlessPipeline', {
             pipelineName: 'MercuryServerlessPipeline',
             synth: new ShellStep('Synth', {
-                input: CodePipelineSource.gitHub('Bithuis/mercury-serverless', 'main'),
+                input: CodePipelineSource.gitHub('Bithuis/mercury-serverless', 'main'), // Token stored in Secrets Manager
                 commands: [
                     'npm ci',
                     'npm run build',
