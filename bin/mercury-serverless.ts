@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
-import * as cdk from 'aws-cdk-lib';
-import { MercuryServerlessStack } from '../lib/mercury-serverless-stack';
+import { App } from 'aws-cdk-lib';
+import { MercuryPipelineStack } from '../lib/mercury-pipeline-stack';
 
-const app = new cdk.App();
-new MercuryServerlessStack(app, 'MercuryServerlessStack', {
-  env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+const app = new App();
+new MercuryPipelineStack(app, 'MercuryPipelineStack', {
+  env: { account: '905812565527', region: 'us-east-2' },
 });
 
 app.synth();
