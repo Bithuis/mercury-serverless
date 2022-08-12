@@ -6,6 +6,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "lambda-install": "(cd lib/lambdas && npm install)",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"

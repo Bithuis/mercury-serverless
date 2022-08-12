@@ -14,6 +14,7 @@ export class MercuryPipelineStack extends cdk.Stack {
                 input: CodePipelineSource.gitHub('Bithuis/mercury-serverless', 'main'), // Token stored in Secrets Manager
                 commands: [
                     'npm ci',
+                    'npm run lambda-install',
                     'npm run build',
                     'npx cdk synth',
                 ]
